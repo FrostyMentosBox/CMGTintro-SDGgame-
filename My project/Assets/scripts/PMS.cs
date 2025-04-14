@@ -21,10 +21,7 @@ public class PMS : MonoBehaviour
             transform.position = new Vector2(transform.position.x + Speed * Time.deltaTime, transform.position.y);
         }
         if(Input.GetKey(KeyCode.Space)){
-            transform.position = new Vector2(transform.position.x , transform.position.y + Speed * Time.deltaTime);
-        }
-        if(Input.GetKey(KeyCode.LeftShift)){
-            transform.position = new Vector2(transform.position.x , transform.position.y - Speed * Time.deltaTime);
+            transform.position = new Vector2(transform.position.x, transform.position.y + Speed * Time.deltaTime);
         }
     }
 }
