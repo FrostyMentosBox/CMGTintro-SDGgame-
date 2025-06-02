@@ -266,6 +266,7 @@ MonoBehaviour:
   pointB: {fileID: 689653075}
   rb: {fileID: 492510175}
   speed: 2
+  Debris: {fileID: 492510171}
 --- !u!212 &492510173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -535,13 +536,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: -0.0017570988, y: -5.094947, z: -10}
   m_LocalScale: {x: 0.17570989, y: -1.0376674, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1401302846}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!1 &612463996
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +651,7 @@ MonoBehaviour:
   pointB: {fileID: 1767291799}
   rb: {fileID: 612463998}
   speed: 2
+  Debris: {fileID: 612463996}
 --- !u!212 &612464000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1264,7 +1266,7 @@ PrefabInstance:
     - target: {fileID: 270394267970809002, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1539064392}
+      objectReference: {fileID: 1547814704}
     - target: {fileID: 270394267970809003, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
       propertyPath: splashParticle
       value: 
@@ -1298,7 +1300,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fe42846fb4bc414b84401e88f8f9532, type: 3}
---- !u!43 &1539064392
+--- !u!43 &1547814704
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1503,8 +1505,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778203501}
-  - component: {fileID: 1778203503}
   - component: {fileID: 1778203502}
+  - component: {fileID: 1778203503}
   m_Layer: 0
   m_Name: Fisher!
   m_TagString: Untagged
@@ -1521,7 +1523,7 @@ Transform:
   m_GameObject: {fileID: 1778203500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 5.14, z: 0}
+  m_LocalPosition: {x: -13.03, y: -16, z: 0}
   m_LocalScale: {x: 0.17570989, y: -1.0376674, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1579,26 +1581,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!250 &1778203503
-PointEffector2D:
+--- !u!114 &1778203503
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778203500}
   m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 39
-  m_ForceMagnitude: -10
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 1
-  m_ForceTarget: 1
-  m_ForceMode: 0
-  m_Drag: 1
-  m_AngularDrag: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ab9ac6bf12c4a962b4232b194fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fisher: {fileID: 1778203500}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

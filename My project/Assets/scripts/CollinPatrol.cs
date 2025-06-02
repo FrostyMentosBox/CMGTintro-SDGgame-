@@ -9,6 +9,7 @@ public class CollinPatrol : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private Transform currentPoint;
     public float speed;
+    public GameObject Debris;
     Vector2 originalPosition;
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,9 @@ public class CollinPatrol : MonoBehaviour
         if(rb.transform.position.y < -20f)
         {
             rb.transform.position = originalPosition;
+        }
+        if (Vector2.Distance(transform.position, phishing.instance.Fisher.transform.position) < 0.5 && Input.GetKeyDown(KeyCode.R)){
+            Destroy(Debris);
         }
     }
     private void OnDrawGizmos()
