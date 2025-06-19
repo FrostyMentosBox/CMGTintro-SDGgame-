@@ -57,8 +57,11 @@ public class CollinPatrol : MonoBehaviour
         {
             rb.transform.position = originalPosition;
         }
-        if (Vector2.Distance(transform.position, phishing.instance.Fisher.transform.position) < 0.5 && Input.GetKeyDown(KeyCode.R)){
+        if (Vector2.Distance(transform.position, phishing.instance.Fisher.transform.position) < 1 && Input.GetKeyDown(KeyCode.R))
+        {
             Destroy(Debris);
+            Destroy(pointA);
+            Destroy(pointB);
         }
     }
     private void OnDrawGizmos()
