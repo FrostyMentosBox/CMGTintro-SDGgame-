@@ -18,6 +18,10 @@ public class Timer : MonoBehaviour
     
     private void Awake() => _Timer = GetComponent<TMP_Text>();
 
+    private void Start()
+    {
+        EventManager.OnTimerStart();
+    }
     private void OnEnable()
     {
         EventManager.TimerStart += EventManagerOnTimerStart;
@@ -48,6 +52,6 @@ public class Timer : MonoBehaviour
         timeToDisplay += timerType == TimerType.Countdown ? -Time.deltaTime : Time.deltaTime;
 
         TimeSpan timeSpan = TimeSpan.FromSeconds(timeToDisplay);
-        _Timer.text = timeSpan.ToString(@"mm\:ss\:ff");
+        _Timer.text = timeSpan.ToString(@"mm\:ss\.ff");
     }
 }
